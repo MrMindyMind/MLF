@@ -133,4 +133,16 @@ public class MultiLayeredString {
 
         return longestLayer;
     }
+
+    @Override
+    public String toString() {
+        if (layers == null)
+            return super.toString();
+        StringBuilder stringBuilder = new StringBuilder("[");
+        for (String layer : layers) {
+            stringBuilder.append(layer).append(",");
+        }
+        return stringBuilder.replace(stringBuilder.length() - 1, stringBuilder.length(), "")
+                .append("]").toString();
+    }
 }
