@@ -20,7 +20,7 @@ The simplest way to look at this problem is by considering the following matrix:
 The rows of the matrix are the string layers, while the columns show the "layered word". A word which consists of the characters
 from all layers, constructed from the relative column.
 
-####Note
+#### Note
 The strings shown in this layer are, for example:
 
 >Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et.
