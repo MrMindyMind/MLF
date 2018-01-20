@@ -5,8 +5,10 @@ import com.hotmail.maximglukhov.mls.impl.AESDecoderImpl;
 import com.hotmail.maximglukhov.mls.impl.AESEncoderImpl;
 
 import java.io.IOException;
-import java.nio.charset.Charset;
-import java.nio.file.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 
 public class Main {
 

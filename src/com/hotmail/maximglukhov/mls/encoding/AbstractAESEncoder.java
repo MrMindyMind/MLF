@@ -1,7 +1,5 @@
 package com.hotmail.maximglukhov.mls.encoding;
 
-import sun.misc.BASE64Encoder;
-
 import javax.crypto.Cipher;
 import java.security.Key;
 
