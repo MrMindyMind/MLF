@@ -4,7 +4,7 @@
 This repository demonstrates an implementation and proof-of-concept for the idea "Multi Layered File" (or MLF in short).
 
 The idea of MLF is a new way of saving data inside files, which is represented by a "Multi Layered String" (or MLS in short).
-One dimensional string which holds information about multiple layers of different strings of different lengths.
+One dimensional string which holds information about multiple layers of different strings of varying lengths.
 
 ## Concept
 MLF is practically done using MLS, so let's talk about that.
@@ -33,7 +33,7 @@ The strings shown in this layer are, for example:
 
 "NULL" in the matrix indicates a null terminator - to demonstrate that layer lengths can vary (and even be empty!).
 
-If we take each row vector and build a string out of it, we get a string that holds information about every layer obviously.
+If we take each column vector and build a string out of it, we get a string that holds information about every layer obviously.
 The next step would be to encode this information in a way that we can retrieve it later.
 
 By repeating the process for all the columns in the matrix we get one string, holding all of the information about the given layers.
