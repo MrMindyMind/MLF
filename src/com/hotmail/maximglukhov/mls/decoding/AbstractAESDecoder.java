@@ -4,14 +4,23 @@ import javax.crypto.Cipher;
 import java.security.Key;
 
 /**
- * Created by maxim on 1/20/2018.
+ * Abstract implementation for {@link MLSDecoder} using AES encryption.
  */
 public abstract class AbstractAESDecoder implements MLSDecoder {
 
+    /**
+     * Algorithm representation of this decoder.
+     */
     private String algorithm;
 
+    /**
+     * Holds instance of the {@link Cipher} used for decoding.
+     */
     private Cipher cipherInstance;
 
+    /**
+     * Constructs a new AES based decoder.
+     */
     public AbstractAESDecoder() {
         algorithm = getAlgorithm();
 
@@ -23,9 +32,18 @@ public abstract class AbstractAESDecoder implements MLSDecoder {
         }
     }
 
+    /**
+     * Gets the {@link Cipher} used for this decoder.
+     * @return {@link Cipher} used for this decoder.
+     */
     protected Cipher getCipherInstance() {
         return cipherInstance;
     }
 
+    /**
+     * Generates key to use with this decoder.
+     * @param algorithm algorithm string representation of the algorithm used by this decoder.
+     * @return instance of {@link Key} implementation.
+     */
     protected abstract Key generateKey(String algorithm);
 }
